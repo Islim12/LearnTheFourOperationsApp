@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.islimakkaya.samples.application.learnthefouroperations">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LearnTheFourOperationsApp">
+        <activity android:name="org.islimakkaya.samples.application.learnthefouroperations.DoChallengeActivity"></activity>
+        <activity android:name="org.islimakkaya.samples.application.learnthefouroperations.LearnDivisionActivity" />
+        <activity android:name="org.islimakkaya.samples.application.learnthefouroperations.LearnMultiplicationActivity" />
+        <activity android:name="org.islimakkaya.samples.application.learnthefouroperations.LearnSubtractionActivity" />
+        <activity android:name="org.islimakkaya.samples.application.learnthefouroperations.LearnAdditionActivity" />
+        <activity android:name="org.islimakkaya.samples.application.learnthefouroperations.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

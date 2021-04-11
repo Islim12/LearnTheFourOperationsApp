@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageViewStar3"
+        android:layout_width="202dp"
+        android:layout_height="67dp"
+        android:contentDescription="@string/welcomePageImage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toEndOf="@+id/textViewWelcome"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWelcome"
+        app:layout_constraintVertical_bias="0.002"
+        app:srcCompat="@drawable/ic_baseline_star_24" />
+
+    <TextView
+        android:id="@+id/textViewWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_message"
+        android:textColor="#0E0E0E"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.081" />
+
+    <ImageView
+        android:id="@+id/imageViewStar"
+        android:layout_width="202dp"
+        android:layout_height="67dp"
+        android:contentDescription="@string/welcomePageImage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWelcome"
+        app:layout_constraintVertical_bias="0.066"
+        app:srcCompat="@drawable/ic_baseline_star_24" />
+
+    <ImageView
+        android:id="@+id/imageViewStar2"
+        android:layout_width="202dp"
+        android:layout_height="67dp"
+        android:contentDescription="@string/welcomePageImage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewWelcome"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWelcome"
+        app:layout_constraintVertical_bias="0.002"
+        app:srcCompat="@drawable/ic_baseline_star_24" />
+
+    <Button
+        android:id="@+id/buttonAdditionActivity"
+        android:layout_width="229dp"
+        android:layout_height="71dp"
+        android:text="@string/open_addition_activity_button_name"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWelcome"
+        app:layout_constraintVertical_bias="0.284" />
+
+    <Button
+        android:id="@+id/buttonSubtractionActivity"
+        android:layout_width="229dp"
+        android:layout_height="71dp"
+        android:text="@string/open_subtraction_activity_button_name"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAdditionActivity"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttonMultiplicationActivity"
+        android:layout_width="229dp"
+        android:layout_height="71dp"
+        android:text="@string/open_multiplication_activity_button_name"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSubtractionActivity"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttonDivisionActivity"
+        android:layout_width="229dp"
+        android:layout_height="71dp"
+        android:text="@string/open_division_activity_button_name"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMultiplicationActivity"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <Button
+        android:id="@+id/buttonChallengeActivity"
+        android:layout_width="229dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="1dp"
+        android:text="@string/open_challenge_activity_button_name"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDivisionActivity"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

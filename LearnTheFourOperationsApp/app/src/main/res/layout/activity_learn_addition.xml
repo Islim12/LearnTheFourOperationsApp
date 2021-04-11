@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:outlineProvider="bounds"
+    tools:context=".LearnAdditionActivity">
+
+    <TextView
+        android:id="@+id/textMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/plusSign"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewNumber1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text=""
+        android:textSize="120sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.36" />
+
+    <TextView
+        android:id="@+id/textViewNumber2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text=""
+        android:textSize="120sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.361" />
+
+    <ImageView
+        android:id="@+id/plusSign"
+        android:layout_width="147dp"
+        android:layout_height="145dp"
+        android:contentDescription="@string/plusSignImage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewNumber2"
+        app:layout_constraintStart_toEndOf="@+id/textViewNumber1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.384"
+        app:srcCompat="@drawable/ic_baseline_add_24" />
+
+    <Button
+        android:id="@+id/buttonOption1"
+        android:layout_width="84dp"
+        android:layout_height="172dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="62dp"
+        android:text=""
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonOption2"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plusSign"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/buttonOption2"
+        android:layout_width="84dp"
+        android:layout_height="172dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="62dp"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plusSign"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/buttonOption3"
+        android:layout_width="84dp"
+        android:layout_height="172dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="62dp"
+        android:text=""
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toEndOf="@+id/buttonOption2"
+        app:layout_constraintTop_toBottomOf="@+id/plusSign"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

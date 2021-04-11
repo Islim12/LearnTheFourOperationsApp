@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Learn The Four Operations</string>
+
+    <!-- Messages -->
+    <string name="welcome_message">Welcome!</string>
+    <string name="input_error_message">Please Enter a Number</string>
+    <string name="wrong_input_message">Wrong Answer!</string>
+    <string name="correct_input_message">Correct Answer!</string>
+    <string name="congratulation_message">Congrats!</string>
+
+
+    <!-- Description -->
+    <string name="welcomePageImage">Welcome Page Image</string>
+    <string name="plusSignImage">Plus Sign</string>
+
+    <!-- Button Names -->
+    <string name="open_addition_activity_button_name">ADDITION</string>
+    <string name="open_subtraction_activity_button_name">SUBTRACTION</string>
+    <string name="open_multiplication_activity_button_name">MULTIPLICATION</string>
+    <string name="open_division_activity_button_name">DIVISION</string>
+    <string name="open_challenge_activity_button_name">CHALLENGE</string>
+</resources>
