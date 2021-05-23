@@ -9,7 +9,7 @@
     tools:context=".LearnAdditionActivity">
 
     <TextView
-        android:id="@+id/textMessage"
+        android:id="@+id/learnAdditionActivityMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
@@ -20,32 +20,19 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewNumber1"
+        android:id="@+id/addend1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:text=""
+        android:textColor="@color/black"
         android:textSize="120sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintEnd_toStartOf="@+id/plusSign"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.36" />
-
-    <TextView
-        android:id="@+id/textViewNumber2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:text=""
-        android:textSize="120sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.84"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.361" />
 
     <ImageView
         android:id="@+id/plusSign"
@@ -53,14 +40,30 @@
         android:layout_height="145dp"
         android:contentDescription="@string/plusSignImage"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textViewNumber2"
-        app:layout_constraintStart_toEndOf="@+id/textViewNumber1"
+        app:layout_constraintEnd_toStartOf="@+id/addend2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/addend1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.384"
-        app:srcCompat="@drawable/ic_baseline_add_24" />
+        app:srcCompat="@drawable/plus_sign_orange" />
+
+    <TextView
+        android:id="@+id/addend2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="120sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/plusSign"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.361" />
 
     <Button
-        android:id="@+id/buttonOption1"
+        android:id="@+id/buttonSumOption1"
         android:layout_width="84dp"
         android:layout_height="172dp"
         android:layout_marginTop="48dp"
@@ -68,30 +71,28 @@
         android:text=""
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonOption2"
-        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSumOption2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/plusSign"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/buttonOption2"
+        android:id="@+id/buttonSumOption2"
         android:layout_width="84dp"
         android:layout_height="172dp"
-        android:layout_marginStart="160dp"
         android:layout_marginTop="48dp"
-        android:layout_marginEnd="160dp"
         android:layout_marginBottom="62dp"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSumOption3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonSumOption1"
         app:layout_constraintTop_toBottomOf="@+id/plusSign"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/buttonOption3"
+        android:id="@+id/buttonSumOption3"
         android:layout_width="84dp"
         android:layout_height="172dp"
         android:layout_marginTop="48dp"
@@ -100,8 +101,8 @@
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
-        app:layout_constraintStart_toEndOf="@+id/buttonOption2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonSumOption2"
         app:layout_constraintTop_toBottomOf="@+id/plusSign"
         app:layout_constraintVertical_bias="1.0" />
 

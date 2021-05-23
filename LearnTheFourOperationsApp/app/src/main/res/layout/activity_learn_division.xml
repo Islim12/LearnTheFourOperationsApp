@@ -4,19 +4,108 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:outlineProvider="bounds"
     tools:context=".LearnDivisionActivity">
 
-
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/learnDivisionActivityMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Division Page"
+        android:text=""
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/divisionSign"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dividend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="120sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/divisionSign"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.36" />
+
+    <TextView
+        android:id="@+id/divisionSign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/divisionSignImage"
+        android:text="@string/divisionSign"
+        android:textColor="@color/orange"
+        android:textSize="176sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/divisor"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dividend"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.325" />
+
+    <TextView
+        android:id="@+id/divisor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="120sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/divisionSign"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.361" />
+
+    <Button
+        android:id="@+id/quotientOption1"
+        android:layout_width="84dp"
+        android:layout_height="172dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="62dp"
+        android:text=""
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/quotientOption2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divisionSign"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/quotientOption2"
+        android:layout_width="84dp"
+        android:layout_height="172dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="62dp"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/quotientOption3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/quotientOption1"
+        app:layout_constraintTop_toBottomOf="@+id/divisionSign"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/quotientOption3"
+        android:layout_width="84dp"
+        android:layout_height="172dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="62dp"
+        android:text=""
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/quotientOption2"
+        app:layout_constraintTop_toBottomOf="@+id/divisionSign"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

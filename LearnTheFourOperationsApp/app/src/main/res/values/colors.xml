@@ -11,11 +11,13 @@
     <color name="gray">#7285A5</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="orange">#AF3400</color>
 
     <!--For Gradient Background-->
     <color name="gradient_start">#BDD4E7</color>
     <color name="gradient_end">#FF23729A</color>
     <color name="gradient_center">#BDD4E7</color>
+
 
 
 </resources>

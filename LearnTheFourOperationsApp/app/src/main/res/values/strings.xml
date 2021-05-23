@@ -12,6 +12,11 @@
     <!-- Description -->
     <string name="welcomePageImage">Welcome Page Image</string>
     <string name="plusSignImage">Plus Sign</string>
+    <string name="minusSignImage">Minus Sign</string>
+    <string name="multiplicationSignImage">Multiplication Sign</string>
+    <string name="divisionSignImage">Division Sign</string>
+
+    <string name="divisionSign">÷</string>
 
     <!-- Button Names -->
     <string name="open_addition_activity_button_name">ADDITION</string>

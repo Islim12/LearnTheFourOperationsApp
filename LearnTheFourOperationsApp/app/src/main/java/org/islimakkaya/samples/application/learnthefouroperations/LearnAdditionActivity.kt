@@ -22,15 +22,15 @@ class LearnAdditionActivity : AppCompatActivity() {
 
         newGame()
 
-        binding.buttonOption1.setOnClickListener {
+        binding.buttonSumOption1.setOnClickListener {
             onOption1Clicked()
         }
 
-        binding.buttonOption2.setOnClickListener {
+        binding.buttonSumOption2.setOnClickListener {
             onOption2Clicked()
         }
 
-        binding.buttonOption3.setOnClickListener {
+        binding.buttonSumOption3.setOnClickListener {
             onOption3Clicked()
         }
     }
@@ -42,7 +42,7 @@ class LearnAdditionActivity : AppCompatActivity() {
 
     private fun onOption1Clicked()
     {
-        if (buttonOption1.text.equals(randomNumsSum.toString())) {
+        if (buttonSumOption1.text.equals(randomNumsSum.toString())) {
             onCorrectOptionClicked()
             newGame()
         }
@@ -52,7 +52,7 @@ class LearnAdditionActivity : AppCompatActivity() {
 
     private fun onOption2Clicked()
     {
-        if (buttonOption2.text.equals(randomNumsSum.toString())) {
+        if (buttonSumOption2.text.equals(randomNumsSum.toString())) {
             onCorrectOptionClicked()
             newGame()
         }
@@ -62,7 +62,7 @@ class LearnAdditionActivity : AppCompatActivity() {
 
     private fun onOption3Clicked()
     {
-        if (buttonOption3.text.equals(randomNumsSum.toString())) {
+        if (buttonSumOption3.text.equals(randomNumsSum.toString())) {
             onCorrectOptionClicked()
             newGame()
         }
@@ -76,8 +76,8 @@ class LearnAdditionActivity : AppCompatActivity() {
     }
 
     private fun displayNumbers() {
-        binding.textViewNumber1.text = randomNum1.toString()
-        binding.textViewNumber2.text = randomNum2.toString()
+        binding.addend1.text = randomNum1.toString()
+        binding.addend2.text = randomNum2.toString()
     }
 
     private fun newGame()
@@ -106,23 +106,23 @@ class LearnAdditionActivity : AppCompatActivity() {
 
     private fun setCorrectOption1()
     {
-        binding.buttonOption1.text = randomNumsSum.toString()
-        binding.buttonOption2.text = randomOptionNum1.toString()
-        binding.buttonOption3.text = randomOptionNum2.toString()
+        binding.buttonSumOption1.text = randomNumsSum.toString()
+        binding.buttonSumOption2.text = randomOptionNum1.toString()
+        binding.buttonSumOption3.text = randomOptionNum2.toString()
     }
 
     private fun setCorrectOption2()
     {
-        binding.buttonOption2.text = randomNumsSum.toString()
-        binding.buttonOption1.text = randomOptionNum1.toString()
-        binding.buttonOption3.text = randomOptionNum2.toString()
+        binding.buttonSumOption2.text = randomNumsSum.toString()
+        binding.buttonSumOption1.text = randomOptionNum1.toString()
+        binding.buttonSumOption3.text = randomOptionNum2.toString()
     }
 
     private fun setCorrectOption3()
     {
-        binding.buttonOption3.text = randomNumsSum.toString()
-        binding.buttonOption1.text = randomOptionNum1.toString()
-        binding.buttonOption2.text = randomOptionNum2.toString()
+        binding.buttonSumOption3.text = randomNumsSum.toString()
+        binding.buttonSumOption1.text = randomOptionNum1.toString()
+        binding.buttonSumOption2.text = randomOptionNum2.toString()
     }
 
     private fun setOptionRandomNums() {
