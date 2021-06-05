@@ -29,7 +29,7 @@ class MainPageFragment : Fragment() {
          val c3 = Categories(3, "Multiplication", "multiplication")
          val c4 = Categories(4, "Division", "division")
          val c5 = Categories(5, "Profile", "profile")
-         val c6 = Categories(6, "About Us", "about_us")
+         val c6 = Categories(6, "About Me", "about")
 
          categoriesList = ArrayList()
 

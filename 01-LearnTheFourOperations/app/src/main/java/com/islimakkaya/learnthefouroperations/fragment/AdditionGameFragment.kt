@@ -25,7 +25,7 @@ class AdditionGameFragment : Fragment() {
     private var randomNumsSum = 0
     private var randomOptionNum1 = 0
     private var randomOptionNum2 = 0
-    private var wrongAnswer = 0
+    var wrongAnswer = 0
     private var remainedQuestion = 15
     private var clickedWrongAnswer = 0
 
@@ -57,12 +57,13 @@ class AdditionGameFragment : Fragment() {
     private fun decision()
     {
         design.additionRemainedQuestion.text = "15 / $remainedQuestion"
-        if (remainedQuestion in 1..5)
-            hardNewGame()
-        else if (remainedQuestion == 0) {
-           endGame()
+        when (remainedQuestion) {
+            in 1..5 -> hardNewGame()
+            0 -> {
+                endGame()
+            }
+            else -> displayNewGame()
         }
-        else displayNewGame()
     }
 
     private fun endGame()

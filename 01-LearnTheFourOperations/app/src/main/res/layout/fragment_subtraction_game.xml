@@ -24,6 +24,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
             app:srcCompat="@drawable/minus_sign_orange" />
 
         <TextView
@@ -44,7 +45,10 @@
             android:id="@+id/learnSubtractionActivityMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/indie_flower"
+            android:gravity="center"
             android:text=""
+            android:textColor="@color/textColor2"
             android:textSize="36sp"
             app:layout_constraintBottom_toTopOf="@+id/minusSign"
             app:layout_constraintEnd_toEndOf="parent"
@@ -138,6 +142,21 @@
             app:layout_constraintStart_toEndOf="@+id/differenceOption2"
             app:layout_constraintTop_toBottomOf="@+id/minusSign"
             app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/subtractionRemainedQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/carter_one"
+            android:textColor="@color/textColor2"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.134" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

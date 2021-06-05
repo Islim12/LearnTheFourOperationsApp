@@ -1,5 +1,6 @@
 package com.islimakkaya.learnthefouroperations.fragment
 
+import android.animation.ObjectAnimator
 import android.os.Bundle
 import android.os.CountDownTimer
 import androidx.fragment.app.Fragment
@@ -11,6 +12,7 @@ import androidx.databinding.DataBindingUtil
 import com.islimakkaya.learnthefouroperations.R
 import com.islimakkaya.learnthefouroperations.databinding.FragmentDivisionGameBinding
 import com.islimakkaya.learnthefouroperations.util.NumberUtil
+import kotlinx.android.synthetic.main.fragment_addition_game.*
 import kotlinx.android.synthetic.main.fragment_division_game.*
 import kotlin.random.Random
 
@@ -21,8 +23,9 @@ class DivisionGameFragment : Fragment() {
     private var numsQuotient = 0
     private var randomOptionNum1 = 0
     private var randomOptionNum2 = 1
-    private var score = 200
+    private var wrongAnswer = 0
     private var remainedQuestion = 15
+    private var clickedWrongAnswer = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -61,15 +64,39 @@ class DivisionGameFragment : Fragment() {
         }.start()
     }
 
+    private fun endGame()
+    {
+        //TODO endGameSound()
+        val correctAnswer = 15 - wrongAnswer
+        design.learnDivisionActivityMessage.text = "Correct: $correctAnswer✔️\n Wrong: $wrongAnswer ❌"
+        textAnimation()
+        disableButton(design.quotientOption1)
+        disableButton(design.quotientOption2)
+        disableButton(design.quotientOption3)
+    }
+
+    private fun disableButton(button: Button) {
+        button.isClickable = false
+    }
+
+    private fun textAnimation() {
+        val anim = ObjectAnimator.ofFloat(learnDivisionActivityMessage, "translationX", -500.0f, 0.0f)
+                .apply {
+                    duration = 2000
+                }
+        anim.start()
+    }
+
     private fun decision()
     {
-        if (remainedQuestion in 1..5)
-            hardNewGame()
-        else if (remainedQuestion == 0) {
-            design.learnDivisionActivityMessage.text = "Your Score: 200 / $score"
-            /* TODO endGame() */
+        design.divisionRemainedQuestion.text = "15 / $remainedQuestion"
+        when (remainedQuestion) {
+            in 1..5 -> hardNewGame()
+            0 -> {
+                endGame()
+            }
+            else -> displayNewGame()
         }
-        else displayNewGame()
     }
 
     private fun onOption1Clicked() = onOptionClicked(design.quotientOption1)
@@ -83,16 +110,21 @@ class DivisionGameFragment : Fragment() {
         if (button.text.equals(numsQuotient.toString())) {
             onCorrectOptionClicked()
             remainedQuestion--
+            clickedWrongAnswer = 0
         }
-        else
+        else {
+            clickedWrongAnswer++
             onWrongOptionClicked()
+            if(clickedWrongAnswer == 1)
+                wrongAnswer += 1
+        }
     }
 
     private fun onCorrectOptionClicked() = waitForNewQuestion()
 
     private fun onWrongOptionClicked()
     {
-        score -= if (remainedQuestion in 1..5) 20 else 10
+        design.learnDivisionActivityMessage.text = "Wrong answer, try again! ☺️"
     }
 
     private fun setOperationNumbers() {

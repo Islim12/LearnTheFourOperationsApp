@@ -1,5 +1,6 @@
 package com.islimakkaya.learnthefouroperations.fragment
 
+import android.animation.ObjectAnimator
 import android.os.Bundle
 import android.os.CountDownTimer
 import androidx.fragment.app.Fragment
@@ -14,6 +15,7 @@ import com.islimakkaya.learnthefouroperations.databinding.FragmentAdditionGameBi
 import com.islimakkaya.learnthefouroperations.databinding.FragmentMultiplicationGameBinding
 import com.islimakkaya.learnthefouroperations.entity.Scores
 import kotlinx.android.synthetic.main.fragment_about_us_page.*
+import kotlinx.android.synthetic.main.fragment_addition_game.*
 import kotlinx.android.synthetic.main.fragment_multiplication_game.*
 import kotlin.random.Random
 
@@ -25,8 +27,9 @@ class MultiplicationGameFragment : Fragment() {
     private var randomNumsMult = 0
     private var randomOptionNum1 = 0
     private var randomOptionNum2 = 0
-    private var score = 200
+    private var wrongAnswer = 0
     private var remainedQuestion = 15
+    private var clickedWrongAnswer = 0
 
       override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,7 +38,8 @@ class MultiplicationGameFragment : Fragment() {
           design = DataBindingUtil.inflate(inflater, R.layout.fragment_multiplication_game, container, false)
          //TODO Fragment data binding for functions
           design.multiplicationGameFragment = this
-          displayNewGame()
+
+          decision()
 
           design.productOption1.setOnClickListener {
               onOption1Clicked()
@@ -53,13 +57,37 @@ class MultiplicationGameFragment : Fragment() {
 
     private fun decision()
     {
-        if (remainedQuestion in 1..5)
-            hardNewGame()
-        else if (remainedQuestion == 0) {
-            design.learnMultiplicationActivityMessage.text = "Your Score: 200 / $score"
-            /* TODO endGame() */
+        design.multiplicationRemainedQuestion.text = "15 / $remainedQuestion"
+        when (remainedQuestion) {
+            in 1..5 -> hardNewGame()
+            0 -> {
+                endGame()
+            }
+            else -> displayNewGame()
         }
-        else displayNewGame()
+    }
+
+    private fun endGame()
+    {
+        //TODO endGameSound()
+        val correctAnswer = 15 - wrongAnswer
+        design.learnMultiplicationActivityMessage.text = "Correct: $correctAnswer✔️\n Wrong: $wrongAnswer ❌"
+        textAnimation()
+        disableButton(design.productOption1)
+        disableButton(design.productOption2)
+        disableButton(design.productOption3)
+    }
+
+    private fun disableButton(button: Button) {
+        button.isClickable = false
+    }
+
+    private fun textAnimation() {
+        val anim = ObjectAnimator.ofFloat(learnMultiplicationActivityMessage, "translationX", -500.0f, 0.0f)
+                .apply {
+                    duration = 2000
+                }
+        anim.start()
     }
 
     private fun waitForNewQuestion() {
@@ -88,14 +116,19 @@ class MultiplicationGameFragment : Fragment() {
         if (button.text.equals(randomNumsMult.toString())) {
             onCorrectOptionClicked()
             remainedQuestion--
+            clickedWrongAnswer = 0
         }
-        else
+        else {
+            clickedWrongAnswer++
             onWrongOptionClicked()
+            if(clickedWrongAnswer == 1)
+                wrongAnswer += 1
+        }
     }
 
     private fun onWrongOptionClicked()
     {
-        score -= if (remainedQuestion in 1..5) 20 else 10
+        design.learnMultiplicationActivityMessage.text = "Wrong answer, try again! ☺️"
     }
 
 

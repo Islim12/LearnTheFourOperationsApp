@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/about_us_background"
+    android:background="@drawable/about_me_page_background"
     tools:context=".fragment.AboutUsPageFragment">
 
     <TextView
@@ -14,7 +14,7 @@
         android:layout_marginBottom="132dp"
         android:fontFamily="@font/indie_flower"
         android:gravity="center"
-        android:text="@string/about_us"
+        android:text="@string/about_me"
         android:textColor="@color/textColor2"
         android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="132dp"
         android:fontFamily="@font/carter_one"
-        android:text="@string/about_us_title"
+        android:text="@string/about_me_title"
         android:textColor="@color/textColor2"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"

@@ -7,7 +7,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".fragment.ProfilePageFragment">
 
     <androidx.appcompat.widget.Toolbar
@@ -53,11 +52,11 @@
         app:layout_constraintTop_toBottomOf="@+id/profilePageToolbar" />
 
     <Button
-        android:id="@+id/emailAddress"
+        android:id="@+id/additionScore"
         android:layout_width="409dp"
         android:layout_height="84dp"
         android:backgroundTint="#FBEB6C"
-        android:text="@string/score"
+        android:text="Correct: 12 Wrong: 3"
         android:textAlignment="viewStart"
         android:textAllCaps="false"
         android:textColor="@color/black"
@@ -69,11 +68,11 @@
         app:layout_constraintTop_toBottomOf="@+id/personName" />
 
     <Button
-        android:id="@+id/emailAddress2"
+        android:id="@+id/subtractionScore"
         android:layout_width="409dp"
         android:layout_height="84dp"
         android:backgroundTint="#FBEB6C"
-        android:text="@string/score"
+        android:text="Correct: 11 Wrong: 4"
         android:textAlignment="viewStart"
         android:textAllCaps="false"
         android:textColor="@color/black"
@@ -83,14 +82,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/additionScore" />
 
     <Button
-        android:id="@+id/emailAddress3"
+        android:id="@+id/multiplicationScore"
         android:layout_width="409dp"
         android:layout_height="84dp"
         android:backgroundTint="#FBEB6C"
-        android:text="@string/score"
+        android:text="Correct: 11 Wrong: 4"
         android:textAlignment="viewStart"
         android:textAllCaps="false"
         android:textColor="@color/black"
@@ -100,23 +99,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailAddress2" />
+        app:layout_constraintTop_toBottomOf="@+id/subtractionScore" />
 
     <Button
-        android:id="@+id/emailAddress4"
+        android:id="@+id/divisionScore"
         android:layout_width="409dp"
         android:layout_height="84dp"
         android:backgroundTint="#FBEB6C"
-        android:text="@string/score"
+        android:foregroundGravity="left"
+        android:text="Correct: 13 Wrong: 2"
         android:textAlignment="viewStart"
         android:textAllCaps="false"
         android:textColor="@color/black"
+        app:icon="@drawable/division_icon"
         app:iconSize="80dp"
         app:iconTint="@color/textColor1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailAddress3" />
+        app:layout_constraintTop_toBottomOf="@+id/multiplicationScore" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
