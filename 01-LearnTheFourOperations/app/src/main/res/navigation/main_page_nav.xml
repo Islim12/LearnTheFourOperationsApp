@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_page_nav"
+    app:startDestination="@id/mainPageFragment">
+    <fragment
+        android:id="@+id/multiplicationGameFragment"
+        android:name="com.islimakkaya.learnthefouroperations.fragment.MultiplicationGameFragment"
+        android:label="fragment_multiplication_game"
+        tools:layout="@layout/fragment_multiplication_game" />
+    <fragment
+        android:id="@+id/additionGameFragment"
+        android:name="com.islimakkaya.learnthefouroperations.fragment.AdditionGameFragment"
+        android:label="AdditionGameFragment"
+        tools:layout="@layout/fragment_addition_game"/>
+    <fragment
+        android:id="@+id/mainPageFragment"
+        android:name="com.islimakkaya.learnthefouroperations.fragment.MainPageFragment"
+        android:label="fragment_main_page"
+        tools:layout="@layout/fragment_main_page" >
+        <action
+            android:id="@+id/toAdditionGame"
+            app:destination="@id/additionGameFragment" />
+        <action
+            android:id="@+id/toSubtractionGame"
+            app:destination="@id/subtractionGameFragment" />
+        <action
+            android:id="@+id/toMultiplicationGame"
+            app:destination="@id/multiplicationGameFragment" />
+        <action
+            android:id="@+id/toDivisionGame"
+            app:destination="@id/divisionGameFragment" />
+        <action
+            android:id="@+id/toProfilePage"
+            app:destination="@id/profilePageFragment" />
+        <action
+            android:id="@+id/toAboutUsPage"
+            app:destination="@id/aboutUsPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/divisionGameFragment"
+        android:name="com.islimakkaya.learnthefouroperations.fragment.DivisionGameFragment"
+        android:label="fragment_division_game"
+        tools:layout="@layout/fragment_division_game" />
+    <fragment
+        android:id="@+id/profilePageFragment"
+        android:name="com.islimakkaya.learnthefouroperations.fragment.ProfilePageFragment"
+        android:label="fragment_profile_page"
+        tools:layout="@layout/fragment_profile_page" />
+    <fragment
+        android:id="@+id/subtractionGameFragment"
+        android:name="com.islimakkaya.learnthefouroperations.fragment.SubtractionGameFragment"
+        android:label="fragment_subtraction_game"
+        tools:layout="@layout/fragment_subtraction_game" />
+    <fragment
+        android:id="@+id/aboutUsPageFragment"
+        android:name="com.islimakkaya.learnthefouroperations.fragment.AboutUsPageFragment"
+        android:label="fragment_about_us_page"
+        tools:layout="@layout/fragment_about_us_page" />
+</navigation>

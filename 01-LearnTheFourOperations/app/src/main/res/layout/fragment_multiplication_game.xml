@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="multiplicationGameFragment" type="com.islimakkaya.learnthefouroperations.fragment.MultiplicationGameFragment" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".fragment.MultiplicationGameFragment">
+
+    <ImageView
+        android:id="@+id/multiplicationSign2"
+        android:layout_width="147dp"
+        android:layout_height="145dp"
+        android:contentDescription="@string/multiplicationSignImage"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/multiplicand"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multiplicationSign"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/multiplication_sign_orange" />
+
+    <TextView
+        android:id="@+id/multiplicand2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="120sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/multiplicationSign2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/learnMultiplicationActivityMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/multiplicationSign"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/multiplicationSign"
+        android:layout_width="147dp"
+        android:layout_height="145dp"
+        android:contentDescription="@string/multiplicationSignImage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/multiplicand"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/multiplier"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.233"
+        app:srcCompat="@drawable/multiplication_sign_orange" />
+
+    <TextView
+        android:id="@+id/multiplier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="120sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/multiplicationSign"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.21" />
+
+    <TextView
+        android:id="@+id/multiplicand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="120sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/multiplicationSign"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.238" />
+
+    <Button
+        android:id="@+id/productOption1"
+        android:layout_width="84dp"
+        android:layout_height="172dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="62dp"
+        android:text=""
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/productOption2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multiplicationSign"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/productOption2"
+        android:layout_width="84dp"
+        android:layout_height="172dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="62dp"
+        android:text=""
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/productOption3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/productOption1"
+        app:layout_constraintTop_toBottomOf="@+id/multiplicationSign"
+        app:layout_constraintVertical_bias="0.983" />
+
+    <Button
+        android:id="@+id/productOption3"
+        android:layout_width="84dp"
+        android:layout_height="172dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="62dp"
+        android:text=""
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/productOption2"
+        app:layout_constraintTop_toBottomOf="@+id/multiplicationSign"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

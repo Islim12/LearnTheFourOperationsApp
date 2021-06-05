@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">LearnTheFourOperations</string>
+    <!-- Messages -->
+    <string name="welcome_message">Welcome!</string>
+    <string name="input_error_message">Please Enter a Number</string>
+    <string name="wrong_input_message">Wrong Answer!</string>
+    <string name="correct_input_message">Correct Answer!</string>
+    <string name="congratulation_message">Congrats!</string>
+
+
+    <!-- Description -->
+    <string name="welcomePageImage">Welcome Page Image</string>
+    <string name="plusSignImage">Plus Sign</string>
+    <string name="minusSignImage">Minus Sign</string>
+    <string name="multiplicationSignImage">Multiplication Sign</string>
+    <string name="divisionSignImage">Division Sign</string>
+
+    <string name="divisionSign">÷</string>
+
+    <!-- Button Names -->
+    <string name="open_addition_activity_button_name">ADDITION</string>
+    <string name="open_subtraction_activity_button_name">SUBTRACTION</string>
+    <string name="open_multiplication_activity_button_name">MULTIPLICATION</string>
+    <string name="open_division_activity_button_name">DIVISION</string>
+    <string name="open_challenge_activity_button_name">CHALLENGE</string>
+
+    <string name="person_name">İslim Akkaya</string>
+    <string name="person_email_address">...@gmail.com</string>
+    <string name="score">Score: </string>
+    <string name="person_phone_number">+90 (XXX) XXX XX XX</string>
+
+    <!-- Bar Title Names -->
+    <string name="profile_page_title">Profile</string>
+    <string name="main_page_title">Home Page</string>
+    <string name="about_us">I am a graduate student in Mathematics and this is my graduation project. In this project, I aimed to develop an app in order that children can learn the four operations with more fun.</string>
+    <string name="about_us_title">About Us</string>
+</resources>
